@@ -1,10 +1,12 @@
 module.exports = {
   plugins: [
+    { src: '~plugins/vue-markdown.js', ssr: false },
     { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false }
   ],
 
   css: [
-    'swiper/dist/css/swiper.css'
+    {src:'swiper/dist/css/swiper.css'},
+     { src: 'mavon-editor/dist/css/index.css' }
   ],
   /*
   ** Headers of the page
