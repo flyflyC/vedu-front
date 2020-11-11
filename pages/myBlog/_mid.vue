@@ -1,19 +1,19 @@
 <template>
   <div class="m-content" >
-    <el-form v-if="isLogin>0 && userId==memberId" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+    <el-form v-if="isLogin>0 && userId==memberId" :model="blog" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
       <el-form-item label="标题" prop="title">
-        <el-input v-model="ruleForm.title"></el-input>
+        <el-input v-model="blog.title"></el-input>
       </el-form-item>
       <el-form-item label="摘要" prop="description">
-        <el-input type="textarea" v-model="ruleForm.description"></el-input>
+        <el-input type="textarea" v-model="blog.description"></el-input>
       </el-form-item>
       <el-form-item label="内容" prop="content">
-        <mavon-editor v-model="ruleForm.content"></mavon-editor>
+        <mavon-editor v-model="blog.content"></mavon-editor>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="saveForm(ruleForm)">修改博客</el-button>
-        <el-button type="primary" @click="submitForm(ruleForm)">修改并发布</el-button>
-        <el-button @click="resetForm('ruleForm')">重置</el-button>
+        <el-button type="primary" @click="saveForm(blog)">修改博客</el-button>
+        <el-button type="primary" @click="submitForm(blog)">修改并发布</el-button>
+        <el-button @click="resetForm('blog')">重置</el-button>
       </el-form-item>
     </el-form>
     <el-form v-else style="height: 200px" >

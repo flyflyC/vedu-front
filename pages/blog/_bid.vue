@@ -172,14 +172,14 @@
           })
       },
       initComment(){
-        blogApi.getPageList(this.page, this.limit, this.blogId)
+        blogApi.getPageList(this.page, this.limit, this.blogid)
           .then(response => {
           this.data = response.data.data
         })
 
       },
       addComment(){
-        this.comment.blogId = this.blogId
+        this.comment.blogId = this.blogid
         //this.comment.teacherId = this.courseInfo.teacherId
         blogApi.addComment(this.comment).then(response => {
           if(response.data.success){
